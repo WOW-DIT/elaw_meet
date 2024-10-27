@@ -9,7 +9,7 @@ import json
 class MeetingRoom(Document):
 	def after_insert(self):
 		createMeeting(self)
-
+		
 
 def createMeeting(self):
 	try:
@@ -61,7 +61,7 @@ def createMeeting(self):
 def meetingLogin(user, company):
 	# frappe.throw(user)
 	try:
-		user = frappe.get_doc("User", frappe.session.user)
+		# user = frappe.get_doc("User", frappe.session.user)
 
 		meeting_settings = frappe.get_list(
 			"Meeting Settings",
